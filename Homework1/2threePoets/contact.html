@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Contact Three Poets</title>
+		<meta charset="utf-8">
+		<style>
+			body {
+				font-family: serif;
+				font-size: 18px;
+				padding: 0;
+				margin: 0;
+			}
+			#header {
+				background-color: #F0F0F0;
+				border: 1px dotted #D0D0D0;
+				padding: 5px;
+				margin: 5px;
+			}
+			#header p {
+				font-size: 48px;
+				margin: 0;
+			}
+			#nav {
+				float: left;
+				width: 150px;
+				padding: 5px;
+				margin: 0 5px 5px 5px;
+			}
+			.menu {
+				float: left;
+				width: 180px;
+				padding: 0;
+				margin: 0;
+			}
+			.menu li {
+				list-style: none;
+				margin: 0;
+			}
+			.menu li a img {
+				border: none;
+			}
+			#article {
+				margin: 0 5px 5px 170px;
+				padding: 5px;
+			}
+			h1 {
+				margin: 10px;
+				font-size: 36px;
+			}
+			h1.pageTitle {
+				margin-top: 0;
+			}
+			p {
+				margin: 10px;
+			}
+			ul {
+				margin: 20px;
+				padding: 0;
+			}
+			li {
+				margin: 20px;
+			}
+			#footer {
+				padding: 5px;
+				margin: 0 5px 0 170px;
+				border-top: 1px #AAAAAA solid;
+				font-size: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Header Region -->
+		<div id="header">
+			<p>Three Poets</p>
+		</div>
+
+		<!-- Navigation Region-->
+		<div id="nav">
+			<ul class="menu">
+				<li>
+					<a href="index.html">
+						<img src="buttonHome.png" alt="Home">
+					</a>
+				</li>
+				<li>
+					<a href="Longfellow/longfellow.html">
+						<img src="buttonLongfellow.png" alt="Longfellow">
+					</a>
+				</li>
+				<li>
+					<a href="Poe/poe.html">
+						<img src="buttonPoe.png" alt="Poe">
+					</a>
+				</li>
+				<li>
+					<a href="Whitman/whitman.html">
+						<img id="whitmanButton" src="buttonWhitman.png" alt="Whitman">
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Main Content Region-->
+		<div id="article">
+			<h1 class="pageTitle">Contact</h1>
+			<p>
+				Name (optional):
+				<br />
+				<input type="text" id="name" size="40">
+			</p>
+			<p>
+				Email (optional):
+				<br />
+				<input type="text" size="40">
+			</p>
+			<p>
+				Message (required):
+				<br />
+				<textarea cols="30" rows="5" id="message"></textarea>
+			</p>
+			<p>
+				<button id="send" type="button">Send</button>
+			</p>
+		</div>
+
+		<!-- Footer Region-->
+		<div id="footer">
+			<p>
+				&copy; 2010 Nobody at all&nbsp;&nbsp;|&nbsp;&nbsp;
+				<a href="contact.html">Contact</a>
+			</p>
+		</div>
+	</body>
+</html>
