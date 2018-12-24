@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tema 2</title>
+		<style>
+		*{
+			box-sizing:border-box;
+		}
+		html, body{
+			margin:0;
+			padding:0;
+		}
+		#website{
+			max-width: 1024px;
+			margin: 0 auto;
+		}
+		#header{
+			background-color: #bcda2d;
+			height: 160px;
+			border:1px solid lightgrey;
+			padding:30px;
+			margin-top:10px;
+		}
+		body{
+			background-color:#e0d38e;
+		}
+		.header-right{
+			max-width: 300px;
+			margin: 0 0 0 auto;
+		}
+		#site_title{
+			font-size:32px;
+		}
+		#site_slogan{
+			margin-top:5px;
+			font-size:24px;
+			color:#4a4a4a;
+		}
+		#main{
+			margin:5px 0 10px 0;
+			background-color:#f0e8c3;
+			padding-bottom: 20px;
+		}
+		#navbar{
+			text-align: center;
+			background-color:#e9e6d0;
+			margin:10px;
+			padding:5px;
+		}
+		#navbar > button{
+			color: #293123;
+			background-color: transparent;
+			border: none;
+			padding: 8px;
+			width: 15%;
+		}
+		#navbar > button:not(:last-child){
+			border-right:1px solid #c7c7c7;;
+		}
+		#left-side{
+			width:30%;
+			min-height:500px;
+			display:inline-block;
+			float:left;
+			border-right:1px solid #c7c7c7;
+			padding:10px 15px 10px 10px;
+			background-color: #F0E8C3;
+		}
+		#right-side{
+			width:70%;
+			min-height:500px;
+			display:inline-block;
+			float:left;
+			background-color: #F0E8C3;
+			margin-bottom: 40px;
+		}
+		.menu-header{
+			background-color:#d2d35e;
+			font-size:32px;
+			padding:10px;
+		}
+		#left-side ul{
+			padding-left:8px;
+		}
+		#left-side li{
+			text-decoration: underline;
+			font-size: 20px;
+			list-style: none;
+			margin-bottom: 5px;
+		}
+		#left-side li:before{
+			content: '';
+			display: inline-block;
+			height: 12px;
+			width: 12px;
+			margin-right:5px;
+			background-image: url(https://cdn.iconscout.com/icon/premium/png-256-thumb/dots-19-447541.png);
+			background-size: 12px;
+		}
+
+		/*Follow-up by the student*/
+		.menu-header:before {
+			content: '';
+			display: inline-block;
+			height: 12px;
+			width: 12px;
+			margin-right:5px;
+			background-image: url(img/White_right_arrow.svg.png);
+			background-size: 12px;
+		}
+		.leftSideText {
+		    padding: 10px;
+		    font-size: 20px;
+		}
+		#upperBox {
+			padding: 25px 25px 30px 20px;
+		}
+		#upperBoxTitle {
+			font-size: 32px;
+			padding-bottom: 15px;
+		}
+		#upperBoxText {
+			font-size: 20px;
+		}
+		#lowerBoxes {
+			display: flex;
+			padding-top: 20px;
+			padding-right: 25px;
+		}
+		#lowerBoxes > .box {
+			width: 49%;
+		}
+		#lowerBoxes > .box:not(:last-child){
+			border-right: 1px solid #C7C7C7;;
+		}
+		.box.title {
+			font-size: 32px;
+			padding-bottom: 15px;
+			padding-left: 15px;
+		}
+		.box.text {
+			width: 99%;
+			font-size: 20px;
+			padding: 0 0 25px 15px;
+		}
+		.lowbutton {
+			background-color: #bcda2a;
+			margin-left: 15px;
+			font-size: 14px;
+			font-weight: 600;
+			padding: 15px;
+		}
+		#footer {
+			background-color: #D2D35E;
+			font-size: 20px;
+			text-align: center;
+			width: 98%;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="website">
+			<div id="header">
+				<div class="header-right">
+					<div id="site_title">Enter Site Title</div>
+					<div id="site_slogan">Enter Site Slogan</div>
+				</div>
+			</div>
+			<div id="main">
+				<div id="navbar">
+					<button>Home</button>
+					<button>New Page</button>
+					<button>New Page 2</button>
+					<button>New Page 3</button>
+					<button>New Page 4</button>
+					<button>New Page 5</button>
+				</div>
+				<div id="left-side">
+					<div class="menu-header">Main Menu</div>
+					<ul>
+						<li>Menu Item 1</li>
+						<li>Menu Item 2</li>
+						<li>Menu Item 3</li>
+						<li>Menu Item 4</li>
+						<li>Menu Item 5</li>
+						<li>Menu Item 6</li>
+						<li>Menu Item 7</li>
+						<li>Menu Item 8</li>
+					</ul>
+
+					<div class="menu-header">Block</div>
+					<div style="margin:10px;" class="leftSideText">
+						Enter block content here...
+					</div>
+					<div style="margin:10px;" class="leftSideText">
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a ty
+					</div>
+				</div>
+				<div id="right-side">
+					<div id="upperBox">
+						<div id="upperBoxTitle">Gallery</div>
+						<div id="upperBoxText">Incididunt nulla nulla occaecat ea eu culpa aliquip officia fugiat cillum enim eiusmod officia. Lorem ipsum voluptate velit ut mollit mollit excepteur sunt nulla aute. Veniam duis consectetur excepteur velit esse exercitation elit dolor qui labore do dolore. In tempor consequat sed in magna consectetur veniam reprehenderit. Veniam culpa culpa eu dolore voluptate tempor sint dolor occaecat ad id eiusmod proident irure ut. Consequat eu labore dolore veniam officia elit incididunt magna ut velit proident cillum excepteur esse sit aliquip velit. Ea magna cupidatat ullamco non ut consequat non eiusmod irure irure. Dolor sunt est elit adipisicing quis do anim eiusmod anim et aute excepteur nulla enim consectetur.</div>
+					</div>
+					<div id="lowerBoxes">
+						<div class="box">
+							<div class="box title">Subscription</div>
+							<div class="box text">Commodo et minim dolore elit consequat adipisicing incididunt dolore ut. Lorem ipsum nulla adipisicing amet dolore dolore aliqua ut aute labore ea consectetur eiusmod sunt culpa deserunt tempor enim magna. Lorem ipsum consectetur exercitation commodo elit in exercitation in laboris occaecat sunt laborum tempor nulla consectetur cupidatat velit.</div>
+							<button class="lowbutton">Read more</button>
+						</div>
+						<div class="box">
+							<div class="box title">Other Services</div>
+							<div class="box text">Commodo et minim dolore elit consequat adipisicing incididunt dolore ut. Lorem ipsum nulla adipisicing amet dolore dolore aliqua ut aute labore ea consectetur eiusmod sunt culpa deserunt tempor enim magna. Lorem ipsum consectetur exercitation commodo elit in exercitation in laboris occaecat sunt laborum tempor nulla consectetur cupidatat velit.</div>
+							<button class="lowbutton">Read more</button>
+						</div>
+					</div>
+				</div>
+
+				<br style="clear:both;"/>
+
+				<div id="footer">
+					Copyright &copy; 2014
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
