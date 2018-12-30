@@ -1,0 +1,142 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	padding: 0;
+    margin: 0;
+    height: 99%;
+    background-color: white;
+}
+
+main {
+    border: 2px solid #d5d5d5;
+    border-radius: 10px;
+    margin: 5px auto;
+    width: 99%;
+    height: 100%;
+    background: url(../img/hero.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+main > header {
+	background-color: white;
+    height: 60px;
+    border-radius: 8px 8px 0px 0px;
+    border: 1px solid white;
+    padding-left: 10px;
+}
+
+.form {
+    background-color: rgba(255,255,255,0.6);
+    width: 70%;
+    margin: 0px auto;
+    padding: 0;
+    height: 92%;
+    color: #4f4c49;
+}
+
+.form > header {
+    height: 120px;
+    background-color: rgba(171, 222, 255, 0.8);
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+header > p {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.circle {
+	height: 18px;
+    width: 18px;
+    border: 2px solid #d5d5d5;
+    border-radius: 50%;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.content {
+    height: 83%;
+    background-color: rgba(255,255,255,0.7);
+    padding: 20px 25px;
+}
+
+#formEmail {
+    background-color: rgba(232,233,237,0.8);
+    padding: 20px 20px 5px 20px;
+}
+
+.form-text {
+    font-size: 15px;
+}
+
+#formEmail label p b {
+    font-size: small;
+    color: #969698;
+}
+
+#formEmail input {
+    margin-top: 10px;
+    height: 27px;
+    width: 400px;
+}
+
+#formName {
+    padding: 30px 20px;
+}
+
+#formName input {
+    margin-top: 10px;
+    height: 27px;
+    width: 200px;
+}
+
+.formFormat {
+    margin-top: 10px;
+}
+
+.formFormat .form-text {
+    padding: 10px 20px;
+}
+
+.formFormat input {
+    margin: 20px 5px 0 20px;
+}
+
+.formFormat label b {
+    font-size: 15px;
+}
+
+.formFormat.second {
+    margin-top: -5px;
+}
+
+#send {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+#send button {
+    background-color: #c8e3f5;
+    padding: 10px 40px;
+    border: 0;
+    font-size: 20px;
+    color: #4f4c49;
+}
+
+#send span, span a {
+    font-size: 17px;
+    color: #8fb182;
+}

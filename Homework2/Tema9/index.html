@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>HTML Form</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/stil.css">
+</head>
+<body>
+	<main>
+		<header>
+			<div class="circle"></div>
+			<div class="circle"></div>
+			<div class="circle"></div>
+		</header>
+		<div class="form">
+			<header>
+				<h1>HTML Form</h1>
+				<p>Sign up to the newsletter form below to receive the latest news from our company.</p>
+			</header>
+			<div class="content">
+				<div id="formEmail">
+					<label for="email"><b class="form-text">Email</b><br />
+						<input type="text" name="email" placeholder="hello@conta">
+						<p><b>We will send you an email describing how to activate your newsletter subscription.</b></p>
+					</label>
+				</div>
+				<div id="formName">
+					<label for="name"><b class="form-text">Name</b><br />
+						<input type="text" name="name" placeholder="First">
+						<input type="text" name="name" placeholder="Last">
+					</label>
+				</div>
+				<form class="formFormat">
+					<label for="format"><b class="form-text">Preferred newsletter format</b><br />
+						<input type="radio" name="format" checked="checked"><b>Text</b><br />
+					</label>
+				</form>
+				<form class="formFormat second">
+					<label for="format">
+						<input type="radio" name="format" checked="checked"><b>HTML</b><br />
+					</label>
+				</form>
+				<div id="send">
+					<button><b>Submit</b></button>
+					<span>&nbsp;&nbsp;or&nbsp;<a href="">Clear and start from scratch</a></span>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
