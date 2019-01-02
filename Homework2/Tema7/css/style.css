@@ -1,0 +1,251 @@
+* {
+	box-sizing: border-box;
+}
+@font-face {
+font-family: "GDBoingBold";
+src: url("https://img1.wsimg.com/ux/fonts/boing/1.0/Boing-Bold.woff2") format("woff2"), url("https://img1.wsimg.com/ux/fonts/boing/1.0/Boing-Bold.woff") format("woff");
+}
+@font-face {
+font-family: "GDSherpa";
+src: url("https://img1.wsimg.com/ux/fonts/sherpa/1.0/gdsherpa-bold.woff2") format("woff2"), url("https://img1.wsimg.com/ux/fonts/sherpa/1.0/gdsherpa-bold.woff") format("woff");
+}
+html, body {
+	height: 100%;
+	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+	margin: 0;
+}
+body {
+	width: 61%;
+	margin-left: 20px;
+}
+#banner{
+    width: 100%;
+    display: inline-block;
+    background: -webkit-linear-gradient(top,#FFEC90 0,#EDD14C 100%);
+    background-clip: padding-box;
+    font-size: 16px;
+    font-family: GDBoingBold;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #C7B35C;
+    text-align: center;
+    padding: 5px 15px;
+}
+header {
+	display: flex;
+}
+header img {
+	padding: 20px 25px 5px 5px;
+}
+#headerText {
+	font-weight: bold;
+	padding: 14px 0 0 22px;
+}
+.header {
+	display: inline-block;
+}
+.header.primary {
+    letter-spacing: 0.9px;
+    font-family: GD Boing Black;
+    font-size: 20px;
+}
+.header.secondary {
+    font-family: GD Boing;
+    font-size: 16px;
+    padding-top: 6px;
+}
+.header.secondary a {
+	color: #4664C5;
+}
+section {
+	display: flex;
+	margin-top: 15px;
+}
+#leftHalf {
+	width: 49%;
+}
+#upperLeftBox {
+	text-align: center;
+    font-weight: bold;
+    font-family: GDSherpa;
+    font-size: 18px;
+    padding: 15px;
+    margin-bottom: 18px;
+    background-color: #FEDC45;
+    border: 1px solid #D3D3D3;
+    border-radius: 5px;
+}
+#upperLeftBox button {
+	margin-top: 10px;
+	white-space: nowrap;
+    width: 80px;
+    padding: 9px 14px;
+    font-size: .92857rem;
+    line-height: 14px;
+    border-radius: 3px;
+    border-width: 0;
+    color: #FFF!important;
+    background: #00A63F!important;
+    border-color: #00A63F!important;
+    min-width: 120px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+#upperLeftBox button:hover, #lowerRightBox button:hover {
+    color: #FFF!important;
+    background: #02C54C!important;
+    border-color: #02C54C!important;
+}
+#leftHalf img {
+	margin: 10px 0 0 10px;
+}
+#rightHalf {
+	width: 50%;
+	margin-left: 20px;
+}
+#upRightBox {
+	border: 1px solid #CCC;
+    border-radius: 5px;
+    padding: 40px 0 30px 20px;
+}
+.up.row {
+	display: flex;
+}
+.up.row img, .down.row img {
+	height: 44px;
+    width: 44px;
+}
+.up.row span {
+	font-weight: bold;
+    font-family: GDSherpa;
+    font-size: 17px;
+    padding-left: 25px;
+    margin-top: -5px;
+}
+.up.row button {
+    width: 120px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bolder;
+    white-space: nowrap;
+    color: #00A63F!important;
+    background: 0 0!important;
+    border-color: #00A63F!important;
+    border: 3px solid transparent;
+    padding: 3px 14px;
+    margin: -5px 0 0 20px;
+}
+.down.row {
+	display: flex;
+	margin-top: 26px;
+}
+.down.row span {
+	font-weight: bold;
+    font-family: GDBoingBold;
+    font-size: 17px;
+    padding: 2px 0 0 25px;
+}
+#reg{
+	font-size: 9px;
+    position: absolute;
+    padding-top: 5px;
+    margin-left: -25px;
+}
+#auction {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	margin-top: 5px;
+    font-weight: normal;
+}
+.down.row button {
+	width: 120px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bolder;
+    white-space: nowrap;
+    color: #00A63F!important;
+    background: 0 0!important;
+    border-color: #00A63F!important;
+    border: 3px solid transparent;
+    padding: 3px 14px;
+    margin: 82px 0 0 3px;
+    position: relative;
+}
+.up.row button:hover, .down.row button:hover {
+	color: #FFF!important;
+    background: #02C54C!important;
+    border-color: #02C54C!important;
+}
+#price {
+	font-weight: bold;
+    font-family: GDSherpa;
+    font-size: 14px;
+    margin-top: 1px;
+}
+#price span {
+	color: #F00;
+    font-weight: bold;
+    font-family: GDSherpa;
+    font-size: 14px;
+    padding-left: 3px;
+}
+#lowerRightBox {
+	border: 1px solid #CCC;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    display: grid;
+    padding-bottom: 20px;
+}
+#dotDomain {
+	margin: 0 auto;
+	padding-top: 10px
+}
+#lowerRightBox span {
+	font-family: GDBoingBold;
+    margin-top: 10px;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+}
+#lowerRightBox div {
+	font-family: GDSherpa;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+#lowerRightBox button {
+	margin: 10px 0 0 180px;
+	white-space: nowrap;
+    width: 80px;
+    padding: 9px 14px;
+    font-size: .92857rem;
+    line-height: 14px;
+    border-radius: 3px;
+    border-width: 0;
+    color: #FFF!important;
+    background: #00A63F!important;
+    border-color: #00A63F!important;
+    min-width: 120px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+#checkout {
+	margin: 0 auto;
+	padding-top: 10px;
+}
+footer {
+	float: left;
+    margin-left: 0;
+    height: 40px;
+    width: 964px;
+    text-align: center;
+    font-size: 10px;
+    padding-top: 9px;
+    padding-bottom: 20px;
+    font-family: Verdana;
+    line-height: 1.5;
+}
+footer a {
+	color: #4664C5;
+}
