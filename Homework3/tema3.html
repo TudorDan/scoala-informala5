@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Rezolvari Tema JS Part 1</title>
+		<script type="text/javascript">
+			/**
+			Problema 1
+			O functie care compara 2 valori si returneaza true daca sunt egale si false daca nu sunt egale
+			*/
+			function functie01(a, b) {
+				if(a === b) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			console.log("1) O functie care compara 2 valori si returneaza true daca sunt egale si false daca nu sunt egale\n");
+			console.log("functie01(1, 1) = " + functie01(1, 1));
+			console.log("functie01(1, 10) = " + functie01(1, 10));
+			console.log("functie01(1, '1') = " + functie01(1, '1'));
+			console.log("functie01('a', 'a') = " + functie01('a', 'a'));
+			console.log("functie01('-2', '-1') = " + functie01('-2', '-1'));
+
+			/**
+			Problema 2
+			O functie care compara 2 valori si returneaza -1 daca primul e mai mic ca al doilea, 0 daca sunt egale si 1 daca primul e mai mare ca al doilea
+			*/
+			function functie02(a, b) {
+				if(a < b) {
+					return -1;
+				} else if(a > b) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			console.log("2) O functie care compara 2 valori si returneaza -1 daca primul e mai mic ca al doilea, 0 daca sunt egale si 1 daca primul e mai mare ca al doilea\n");
+			console.log("functie02(1, 1) = " + functie02(1, 1));
+			console.log("functie02(1, 20) = " + functie02(1, 20));
+			console.log("functie02(1, '1') = " + functie02(1, '1'));
+			console.log("functie02('a', 'a') = " + functie02('a', 'a'));
+			console.log("functie02('abs', 'acb') = " + functie02('abs', 'acb'));
+			console.log("functie02('aaas', 'aaaaa') = " + functie02('aaas', 'aaaaa'));
+			console.log("functie02('9', '1000') = " + functie02('9', '1000'));
+			console.log("functie02('-2', '-1') = " + functie02('-2', '-1'));
+			console.log("functie02(-2, -1) = " + functie02(-2, -1));
+			console.log("functie02('AAA', 'aaa') = " + functie02('AAA', 'aaa'));
+
+			/**
+			Problema 3
+			O functie care primeste 2 valori si returneaza maximul dintre cele 2.
+			*/
+			function functie03(val1, val2) {
+				let max = val1;
+				if(max < val2) {
+					max = val2;
+				}
+				return max;
+			}
+			console.log("3) O functie care primeste 2 valori si returneaza maximul dintre cele 2.\n");
+			console.log("functie03(1, 1) = " + functie03(1, 1));
+			console.log("functie03(1, 20) = " + functie03(1, 20));
+			console.log("functie03(1, '1') = " + functie03(1, '1'));
+			console.log("functie03(0, 'a') = " + functie03(0, 'a'));
+			console.log("functie03('abs', 'acb') = " + functie03('abs', 'acb'));
+			console.log("functie03('aaas', 'Aaaaa') = " + functie03('aaas', 'Aaaaa'));
+			console.log("functie03('9', '1000') = " + functie03('9', '1000'));
+			console.log("functie03('-2', '-1') = " + functie03('-2', '-1'));
+			console.log("functie03(-2, -1) = " + functie03(-2, -1));
+			console.log("functie03('a', 'Batman') = " + functie03('a', 'Batman'));
+
+			/**
+			Problema 4
+			O functie care primeste 2 valori si returneaza minimul dintre cele 2
+			*/
+			function functie04(val1, val2) {
+				let min = val1;
+				if(min > val2) {
+					min = val2;
+				}
+				return min;
+			}
+			console.log("4) O functie care primeste 2 valori si returneaza minimul dintre cele 2.\n");
+			console.log("functie04(1, 1) = " + functie04(1, 1));
+			console.log("functie04(1, 20) = " + functie04(1, 20));
+			console.log("functie04(1, '1') = " + functie04(1, '1'));
+			console.log("functie04('a', 0) = " + functie04('a', 0));
+			console.log("functie04('abs', 'acb') = " + functie04('abs', 'acb'));
+			console.log("functie04('aaas', 'aaaaa') = " + functie04('aaas', 'aaaaa'));
+			console.log("functie04('9', '1000') = " + functie04('9', '1000'));
+			console.log("functie04('-2', '-1') = " + functie04('-2', '-1'));
+			console.log("functie04(-2, -1) = " + functie04(-2, -1));
+			console.log("functie04('Ironman', 'i5') = " + functie04('Ironman', 'i5'));
+
+			/**
+			Problema 5
+			O functie care intoarce suma primelor N numere naturale pozitive
+			*/
+			function functie05(n) {
+				if(n > 0) {
+					return n * (n + 1) / 2;
+				}
+				return 0;
+			}
+			console.log("5) O functie care intoarce suma primelor N numere naturale pozitive\n");
+			console.log("functie05(5) = " + functie05(5));
+			console.log("functie05(10) = " + functie05(10));
+			console.log("functie05(0) = " + functie05(0));
+			console.log("functie05(100) = " + functie05(100));
+			console.log("functie05(-1) = " + functie05(-1));
+			console.log("functie05('a') = " + functie05('a'));
+
+			/**
+			Problema 6
+			O functie care verifica daca N este numar prim (restul impartirii la 1 si la N ==0)
+			*/
+			function functie06(val) {
+				if(val <= 0) {
+					return false;
+				}
+				if(val < 2) {
+					return false;
+				}
+				if(val === 2) {
+					return true;
+				}
+				if(val % 2 === 0) {
+					return false;
+				}
+				for(let d = 3; d * d <= val; d += 2) {
+					if(val % d === 0) {
+						return false;
+					}
+				}
+				return true;
+			}
+			console.log("6) O functie care verifica daca N este numar prim (restul impartirii la 1 si la N ==0)\n");
+			console.log("functie06(5) = " + functie06(5));
+			console.log("functie06(10) = " + functie06(10));
+			console.log("functie06(0) = " + functie06(0));
+			console.log("functie06(100) = " + functie06(100));
+			console.log("functie06(-1) = " + functie06(-1));
+			console.log("functie06('a') = " + functie06('a'));
+
+			/**
+			Problema 7
+			O functie care intoarce suma primelor N numere prime
+			*/
+			function functie07(val) {
+				let sum = 0;
+				for(let i = 2; val > 0; i++) {
+					if(functie06(i)) {
+						sum += i;
+						val--;
+					}
+				}
+				return sum;
+			}
+			console.log("7) O functie care intoarce suma primelor N numere prime\n");
+			console.log("functie07(5) = " + functie07(5));
+			console.log("functie07(10) = " + functie07(10));
+			console.log("functie07(0) = " + functie07(0));
+			console.log("functie07(100) = " + functie07(100));
+			console.log("functie07(-1) = " + functie07(-1));
+			console.log("functie07('a') = " + functie07('a'));
+			console.log("functie07(1) = " + functie07(1));
+
+			/**
+			Problema 8
+			O functie care primeste un parametru de tip string si intoarce inversul acestuia (abc => cba)
+			*/
+			function functie08(val) {
+				if(typeof(val) === 'string') {
+					return val.split('').reverse().join('');
+				}
+				console.log('Eroare: parametrul nu e string');
+				return 0;
+			}
+			console.log("8) O functie care primeste un parametru de tip string si intoarce inversul acestuia (abc => cba)\n");
+			console.log("functie08('abc') = " + functie08('abc'));
+			console.log("functie08('Ana are mere') = " + functie08('Ana are mere'));
+			console.log("functie08('a') = " + functie08('a'));
+			console.log("functie08('123') = " + functie08('123'));
+			console.log("functie08(123) = " + functie08(123));
+			console.log("functie08('-2') = " + functie08('-2'));
+			console.log("functie08(-2) = " + functie08(-2));
+
+			/**
+			Problema 9
+			O functie care intoarce produsul primelor N numere impare pozitive
+			*/
+			function functie09(val) {
+				let produs = 1;
+				for(let i = 1, j = 1; i <= val; i++) {
+					produs *= j;
+					j += 2;
+				}
+				return produs;
+			}
+			console.log("9) O functie care intoarce produsul primelor N numere impare pozitive\n");
+			console.log("functie09(5) = " + functie09(5));
+			console.log("functie09(10) = " + functie09(10));
+			console.log("functie09(0) = " + functie09(0));
+			console.log("functie09(100) = " + functie09(100));
+			console.log("functie09(-1) = " + functie09(-1));
+			console.log("functie09('a') = " + functie09('a'));
+			console.log("functie09(1) = " + functie09(1));
+
+			/**
+			Problema 10
+			O functie care primeste 2 parametri(arr - array de nr intregi si x - numar) si verifica daca x exista in array
+			*/
+			function functie10(arr, x) {
+				let gasit = false;
+				let lungime = arr.length;
+				for(let i = 0; i < lungime && !gasit; i++) {
+					if(arr[i] === x) {
+						gasit = true;
+					}
+				}
+				return gasit;
+			}
+			console.log("10) O functie care primeste 2 parametri(arr - array de nr intregi si x - numar) si verifica daca x exista in array\n");
+			console.log("functie10([1, 3, 5, 6], 3) = " + functie10([1, 3, 5, 6], 3));
+			console.log("functie10([1, 3, 5, 6], 13) = " + functie10([1, 3, 5, 6], 13));
+			console.log("functie10([-1, 0, -125, 60], -125) = " + functie10([-1, 0, -125, 60], -125));
+
+			/**
+			Problema 11
+			O functie care intoarce maximul dintr-un array primit ca parametru
+			*/
+			function functie11(arr) {
+				let max = arr[0];
+				let lungime = arr.length;
+				for(let i = 1; i < lungime; i++) {
+					if(max < arr[i]) {
+						max = arr[i];
+					}
+				}
+				return max;
+			}
+			console.log("11) O functie care intoarce maximul dintr-un array primit ca parametru\n");
+			console.log("functie11([1, 3, 5, 6]) = " + functie11([1, 3, 5, 6]));
+			console.log("functie11([-1, 0, -125, 60]) = " + functie11([-1, 0, -125, 60]));
+			console.log("functie11([-23.65, 0.94, 18, -7]) = " + functie11([-23.65, 0.94, 18, -7]));
+			console.log("functie11(['a', 'HP', 'Batman', 0]) = " + functie11(['a', 'HP', 'Batman', 0]));
+			console.log("functie11(['Superman', 'b', 'i5', 'Ironman']) = " + functie11(['Superman', 'b', 'i5', 'Ironman']));
+
+			/**
+			Problema 12
+			O functie care intoarce suma dintre max si min, dintr-un array primit ca parametru
+			*/
+			function functie12(arr) {
+				let max = arr[0];
+				let min = max;
+				let lungime = arr.length;
+				for(let i = 1; i < lungime; i++) {
+					if(max < arr[i]) {
+						max = arr[i];
+					}
+					if(min > arr[i]) {
+						min = arr[i];
+					}
+				}
+				return max + min;
+			}
+			console.log("12) O functie care intoarce suma dintre max si min, dintr-un array primit ca parametru\n");
+			console.log("functie12([1, 3, 5, 6]) = " + functie12([1, 3, 5, 6]));
+			console.log("functie12([-1, 0, -125, 60]) = " + functie12([-1, 0, -125, 60]));
+			console.log("functie12([-23.65, 0.94, 18, -7]) = " + functie12([-23.65, 0.94, 18, -7]));
+			console.log("functie12([0, 'a', 'HP', 'Batman']) = " + functie12([0, 'a', 'HP', 'Batman']));
+			console.log("functie12(['Superman', 'b', 'i5', 'Ironman']) = " + functie12(['Superman', 'b', 'i5', 'Ironman']));
+
+			/**
+			Problema 13
+			O functie care verifica daca exista duplicate intr-un array primit ca parametru
+			*/
+			function functie13(arr) {
+				let verif = false;
+				let lungime = arr.length;
+				for(let i = 0; i < lungime - 1 && !verif; i++) {
+					for(let j = i + 1; j < lungime && !verif; j++) {
+						if(arr[i] === arr[j]) {
+							verif = true;
+						}
+					}
+				}
+				return verif;
+			}
+			console.log("13) O functie care verifica daca exista duplicate intr-un array primit ca parametru\n");
+			console.log("functie13([1, 3, 5, 6, 3]) = " + functie13([1, 3, 5, 6, 3]));
+			console.log("functie13([-1, 0, -125, 60]) = " + functie13([-1, 0, -125, 60]));
+			console.log("functie13([-23.65, 0.94, 18, -7]) = " + functie13([-23.65, 0.94, 18, -7]));
+			console.log("functie13([0, 'a', 'HP', 'Batman', 'a']) = " + functie13([0, 'a', 'HP', 'Batman', 'a']));
+			console.log("functie13(['Superman', 'b', 'i5', 'Ironman']) = " + functie13(['Superman', 'b', 'i5', 'Ironman']));
+
+			/**
+			Problema 14
+			O functie care intoarce produsul numerelor pozitive intr-un array primit ca parametru
+			*/
+			function functie14(arr) {
+				let prod = 1;
+				let lungime = arr.length;
+				let ok = false;
+				for(let i = 0; i < lungime; i++) {
+					if(arr[i] > 0) {
+						prod *= arr[i];
+						ok = true;
+					}
+				}
+				if(ok) {
+					return prod;
+				}
+				console.log('Parametrul [' + arr + '] nu are numere pozitive');
+				return 0;
+			}
+			console.log("14) O functie care intoarce produsul numerelor pozitive intr-un array primit ca parametru\n");
+			console.log("functie14([1, 3, 5, 6]) = " + functie14([1, 3, 5, 6]));
+			console.log("functie14([-1, 0, -125, 60]) = " + functie14([-1, 0, -125, 60]));
+			console.log("functie14([-1, -0.87, -125, -36]) = " + functie14([-1, -0.87, -125, -36]));
+			console.log("functie14([-23.65, 0.94, 18, -7]) = " + functie14([-23.65, 0.94, 18, -7]));
+			console.log("functie14([0, 'a', 'HP', 'Batman', 'a']) = " + functie14([0, 'a', 'HP', 'Batman', 'a']));
+			console.log("functie14(['Superman', 'b', 'i5', 'Ironman']) = " + functie14(['Superman', 'b', 'i5', 'Ironman']));
+
+			/**
+			Problema 15
+			O functie care verifica daca un string primit ca parametru este palindrom (inversul == originalul, ex: abcba == abcba, abca != acba
+			*/
+			function functie15(val) {
+				if(typeof(val) === 'string') {
+					let invers = val.split('').reverse().join('');
+					return val === invers;
+				}
+				console.log('Eroare: parametrul nu e string');
+				return 0;
+			}
+			console.log("15) O functie care verifica daca un string primit ca parametru este palindrom (inversul == originalul, ex: abcba == abcba, abca != acba\n");
+			console.log("functie15('abcba') = " + functie15('abcba'));
+			console.log("functie15('abca') = " + functie15('abca'));
+			console.log("functie15('15951) = " + functie15('15951'));
+			console.log("functie15('a') = " + functie15('a'));
+			console.log("functie15('786.687') = " + functie15('786.687'));
+			console.log("functie15(123) = " + functie15(123));
+			console.log("functie15('-4.04') = " + functie15('-4.04'));
+			console.log("functie15(-2) = " + functie15(-2));
+		</script>
+	</head>
+	<body>
+		<!-- empty -->
+	</body>
+</html>
