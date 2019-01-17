@@ -63,6 +63,7 @@
 			console.log("functie03(1, 20) = " + functie03(1, 20));
 			console.log("functie03(1, '1') = " + functie03(1, '1'));
 			console.log("functie03(0, 'a') = " + functie03(0, 'a'));
+			console.log("functie03('a', 0) = " + functie03('a', 0) );
 			console.log("functie03('abs', 'acb') = " + functie03('abs', 'acb'));
 			console.log("functie03('aaas', 'Aaaaa') = " + functie03('aaas', 'Aaaaa'));
 			console.log("functie03('9', '1000') = " + functie03('9', '1000'));
@@ -85,7 +86,8 @@
 			console.log("functie04(1, 1) = " + functie04(1, 1));
 			console.log("functie04(1, 20) = " + functie04(1, 20));
 			console.log("functie04(1, '1') = " + functie04(1, '1'));
-			console.log("functie04('a', 0) = " + functie04('a', 0));
+			console.log("functie04('a', 78) = " + functie04('a', 78));
+			console.log("functie04(78, 'a') = " + functie04(78, 'a'));
 			console.log("functie04('abs', 'acb') = " + functie04('abs', 'acb'));
 			console.log("functie04('aaas', 'aaaaa') = " + functie04('aaas', 'aaaaa'));
 			console.log("functie04('9', '1000') = " + functie04('9', '1000'));
@@ -171,8 +173,12 @@
 			O functie care primeste un parametru de tip string si intoarce inversul acestuia (abc => cba)
 			*/
 			function functie08(val) {
+				let invers = '';
+				for(let i = val.length - 1; i >= 0; i--) {
+					invers += val[i];
+				}
 				if(typeof(val) === 'string') {
-					return val.split('').reverse().join('');
+					return invers;
 				}
 				console.log('Eroare: parametrul nu e string');
 				return 0;
@@ -329,7 +335,7 @@
 			*/
 			function functie15(val) {
 				if(typeof(val) === 'string') {
-					let invers = val.split('').reverse().join('');
+					let invers = functie08(val);
 					return val === invers;
 				}
 				console.log('Eroare: parametrul nu e string');
