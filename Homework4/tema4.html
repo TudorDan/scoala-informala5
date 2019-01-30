@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Tema JS part 2</title>
+		<script type="text/javascript">
+			/**
+			Problema 1
+			O functie care primeste un sir de caractere si returneaza cifrele din sirul respectiv
+			*/
+			function compCif(val) {
+				let numere = '0123456789';
+				for(let i = 0; i < 10; i++) {
+					if(val === numere[i]) {
+						return true;
+					}
+				}
+				return false;
+			}
+			function functie01(val) {
+				let rezultat = '';
+				let lungime = val.length;
+				for(let i = 0; i < lungime; i++) {
+					if(compCif(val[i])) {
+						rezultat += val[i];
+					}
+				}
+				return rezultat;
+			}
+			console.log("1) O functie care primeste un sir de caractere si returneaza cifrele din sirul respectiv\n");
+			console.log("functie01('34 jep s Ker 5 e1+e9r1 05 m') = " + functie01('34 jep s Ker 5 e1+e9r1 05 m'));
+
+			/**
+			Problema 2
+			O functie care primeste un sir de caractere si returneaza doar literele din sirul respectiv
+			*/
+			function compLit(val) {
+				let litere = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+				for(let i = 0; i < 52; i++) {
+					if(val === litere[i]) {
+						return true;
+					}
+				}
+				return false;
+			}
+			function functie02(val) {
+				let rezultat = '';
+				let lungime = val.length;
+				for(let i = 0; i < lungime; i++) {
+					if(compLit(val[i])) {
+						rezultat += val[i];
+					}
+				}
+				return rezultat;
+			}
+			console.log("2) O functie care primeste un sir de caractere si returneaza doar literele din sirul respectiv\n");
+			console.log("functie02('34 jep s Ker 5 e1+e9r1 05 m') = " + functie02('34 jep s Ker 5 e1+e9r1 05 m'));
+
+			/**
+			Problema 3
+			O functie care primeste un sir de caractere si returneaza primele 5 litere(daca exista)
+			*/
+			function functie03(val) {
+				let rezultat = '';
+				let lungime = val.length;
+				let k = 0;
+				for(let i = 0; i < lungime && k < 5; i++) {
+					if(compLit(val[i])) {
+						rezultat += val[i];
+						k++;
+					}
+				}
+				if(k === 5) {
+					return rezultat;
+				}
+				console.log('Șirul \'' + val + '\'nu conține 5 litere');
+				return 0;
+			}
+			console.log("3) O functie care primeste un sir de caractere si returneaza primele 5 litere(daca exista)\n");
+			console.log("functie03('34 jep s Ker 5 e1+e9r1 05 m') = " + functie03('34 jep s Ker 5 e1+e9r1 05 m'));
+			console.log("functie03('f-2.035f fh2035-952') = " + functie03('f-2.035f fh2035-952'));
+
+			/**
+			Problema 4
+			O functie care primeste o lista de siruri de caractere si returneaza sirurile concatenate
+			*/
+			function functie04(val) {
+				let rezultat = '';
+				let lungime = val.length;
+				for(let i = 0; i < lungime; i++) {
+					rezultat += val[i];
+				}
+				return rezultat;
+			}
+			console.log("4) O functie care primeste o lista de siruri de caractere si returneaza sirurile concatenate\n");
+			console.log("functie04(['Johann', 'Wolfgang', 'Goethe']) = " + functie04(['Johann', 'Wolfgang', 'Goethe']));
+			console.log("functie04(['George', 'Gordon', 'Byron']) = " + functie04(['George', 'Gordon', 'Byron']));
+
+			/**
+			Problema 5
+			O functie care primeste o lista de siruri de caractere si returneaza cifrele din toate sirurile
+			*/
+			function functie05(val) {
+				let rezultat = '';
+				let lungime = val.length;
+				for(let i = 0; i < lungime; i++) {
+					let lungimEl = val[i].length;
+					for(let j = 0; j < lungimEl; j++) {
+						if(compCif(val[i][j])) {
+							rezultat += val[i][j];
+						}
+					}
+				}
+				return rezultat;
+			}
+			console.log("5) O functie care primeste o lista de siruri de caractere si returneaza cifrele din toate sirurile\n");
+			console.log("functie05(['Jo-3hann', 'Wolfg8ang', 'Go10ethe']) = " + functie05(['Jo-3hann', 'Wolfg8ang', 'Go10ethe']));
+			console.log("functie05(['0George', '5Gordon', 'Byron3']) = " + functie05(['0George', '5Gordon', 'Byron3']));
+
+			/**
+			Problema 6
+			O functie care primeste o lista de siruri de caractere si returneaza lista de siruri de caractere inversate
+			*/
+			function oglindit(val) {
+				let invers = '';
+				for(let i = val.length - 1; i >= 0; i--) {
+					invers += val[i];
+				}
+				return invers;
+			}
+			function functie06(val) {
+				let rezultat = [];
+				let lungime = val.length;
+				for(let i = 0; i < lungime; i++) {
+					rezultat[i] = oglindit(val[i]);
+				}
+				return rezultat;
+			}
+			console.log("6) O functie care primeste o lista de siruri de caractere si returneaza lista de siruri de caractere inversate\n");
+			console.log("functie06(['Jo-3hann', 'Wolfg8ang', 'Go10ethe']) = " + functie06(['Jo-3hann', 'Wolfg8ang', 'Go10ethe']));
+			console.log("functie06(['0George', '5Gordon', 'Byron3']) = " + functie06(['0George', '5Gordon', 'Byron3']));
+
+			/**
+			Problema 7
+			Calculeaza factorialul unui numar
+			*/
+			function functie07(n) {
+				if(n === 0) {
+					return 1;
+				} else {
+					return n * functie07(n - 1);
+				}
+				/*
+				let p = 1;
+				for(let i = 2; i <= n; i++) {
+					p *= i;
+				}
+				return p;
+				*/
+			}
+			console.log("7) Calculeaza factorialul unui numar\n");
+			console.log("functie07(5) = " + functie07(5));
+			console.log("functie07(10) = " + functie07(10));
+
+			/**
+			Problema 8
+			Calculeaza cel mai mare divizor comun al 2 numere
+			*/
+			function functie08(a, b) {
+				if(b === 0) {
+					return a;
+				} else {
+					return functie08(b, a % b);
+				}
+				/*
+				while(b!==0)
+				{
+					let r = a%b;
+					a = b;
+					b = r;
+				}
+				return a;
+				*/
+			}
+			console.log("8) Calculeaza cel mai mare divizor comun al 2 numere\n");
+			console.log("functie08(180, 150) = " + functie08(180, 150));
+			console.log("functie08(816, 2260) = " + functie08(816, 2260));
+			console.log("functie08(54, 24) = " + functie08(54, 24));
+
+			/**
+			Problema 9
+			Calculeaza cel mai mic multiplu comun al 2 numere
+			*/
+			function functie09(a, b) {
+				return (a * b) / functie08(a, b);
+			}
+			console.log("9) Calculeaza cel mai mic multiplu comun al 2 numere\n");
+			console.log("functie09(180, 150) = " + functie09(180, 150));
+			console.log("functie09(816, 2260) = " + functie09(816, 2260));
+			console.log("functie09(54, 24) = " + functie09(54, 24));
+			console.log("functie09(6, 4) = " + functie09(6, 4));
+
+			/**
+			Problema 10
+			Returneaza un array care sa contina toti divizorii PROPRII unui numar (ex pentru 64: trebuie sa returneze [2,4,8,16,32])
+			*/
+			function functie10(val) {
+				let rezultat = [];
+				let i = -1, d;
+				for(d = 2; d * d < val; d++) {
+					if(val % d === 0) {
+						rezultat[++i] = d;
+					}
+				}
+				if(d * d === val) {
+					rezultat[++i] = d;
+				}
+				for(d = d - 1; d > 1; d--) {
+					if(val % d === 0) {
+						rezultat[++i] = val / d;
+					}
+				}
+				return rezultat;
+			}
+			console.log("10) Returneaza un array care sa contina toti divizorii unui numar (ex pentru 64: trebuie sa returneze [2,4,8,16,32])\n");
+			console.log("functie10(64) = [" + functie10(64) + "]");
+			console.log("functie10(30) = [" + functie10(30) + "]");
+			console.log("functie10(81) = [" + functie10(81) + "]");
+			console.log("functie10(54) = [" + functie10(54) + "]");
+			console.log("functie10(29) = [" + functie10(29) + "]");
+
+			/**
+			Problema 11
+			O functie care verifica daca un numar este palindrom (ex: 121, 1234321)
+			*/
+			function functie11(val) {
+				let aux = val, ogl = 0;
+				while (aux > 0) {
+					ogl = ogl * 10 + parseInt(aux % 10);
+					aux = parseInt(aux / 10);
+				}
+				return ogl === val;
+			}
+			console.log("11) O functie care verifica daca un numar este palindrom (ex: 121, 1234321)\n");
+			console.log("functie11(121) = " + functie11(121));
+			console.log("functie11(1234321) = " + functie11(1234321));
+			console.log("functie11(81) = " + functie11(81));
+			console.log("functie11(54) = " + functie11(54));
+
+			/**
+			Problema 12
+			O functie care sorteaza numerele pare dintr-un sir de numere primit ca parametru.
+			*/
+			function sortCres(arr) {
+				let lungime = arr.length;
+				for(let i = 0; i < lungime - 1; i++) {
+					for(let j = i + 1; j < lungime; j++) {
+						if(arr[j] < arr[i]) {
+							let aux = arr[i];
+							arr[i] = arr[j];
+							arr[j] = aux;
+						}
+					}
+				}
+				return arr;
+			}
+			function functie12(val) {
+				val = val.split(' ');
+				let lungime = val.length;
+				let rezultat = [];
+				for(let i = 0, k = -1; i < lungime; i++) {
+					if(Number(val[i]) % 2 === 0) {
+						rezultat[++k] = Number(val[i]);
+					}
+				}
+				rezultat = sortCres(rezultat);
+				return rezultat.join(' ');
+			}
+			function functie12Vector(arr) {
+				let lungime = arr.length;
+				for(let i = 0; i < lungime - 1; i++) {
+					for(let j = i + 1; j < lungime; j++) {
+						if(arr[j] < arr[i] && arr[i] % 2 === 0 && arr[j] % 2 === 0) {
+							let aux = arr[i];
+							arr[i] = arr[j];
+							arr[j] = aux;
+						}
+					}
+				}
+				return arr;
+			}
+			console.log("12) O functie care sorteaza numerele pare dintr-un sir de numere primit ca parametru.\n");
+			console.log("functie12('-63 23 0 -57 84 28 -10') = " + functie12('-63 23 0 -57 84 28 -10'));
+			console.log("functie12([-63, 23, 0, -57, 84, 28, -10]) = [" + functie12Vector([-63, 23, 0, -57, 84, 28, -10]) + "]");
+			console.log("functie12([1, 4, 3, 2, 5]) = [" + functie12Vector([1, 4, 3, 2, 5]) + "]");
+
+			/**
+			Problema 13
+			O functie care primeste ca parametru un array de numere. Aceasta sorteaza ascendent numerele pare si descendent numerele impare, in cadrul aceluiasi array primit ca parameru.
+			*/
+			function sortDesc(arr) {
+				let lungime = arr.length;
+				for(let i = 0; i < lungime - 1; i++) {
+					for(let j = i + 1; j < lungime; j++) {
+						if(arr[j] > arr[i]) {
+							let aux = arr[i];
+							arr[i] = arr[j];
+							arr[j] = aux;
+						}
+					}
+				}
+				return arr;
+			}
+			function functie13(val) {
+				let lungime = val.length, i, k;
+				let rezpar = [];
+				for(i = 0, k = -1; i < lungime; i++) {
+					if(val[i] % 2 === 0) {
+						rezpar[++k] = val[i];
+					}
+				}
+				rezpar = sortCres(rezpar);
+				let rezimp = [];
+				for(i = 0, k = -1; i < lungime; i++) {
+					if(val[i] % 2 !== 0) {
+						rezimp[++k] = val[i];
+					}
+				}
+				rezimp = sortDesc(rezimp);
+				//val = rezpar.concat(rezimp);
+				val = rezpar;
+				for(i = rezpar.length, j = 0; j < rezimp.length; i++, j++) {
+					val[i] = rezimp[j];
+				}
+				return val;
+			}
+			console.log("13) O functie care primeste ca parametru un array de numere. Aceasta sorteaza ascendent numerele pare si descendent numerele impare, in cadrul aceluiasi array primit ca parameru.\n");
+			console.log("functie13([20, -53, -75, 0, 13, 98, -159, 357]) = " + functie13([20, -53, -75, 0, 13, 98, -159, 357]));
+
+			/**
+			Problema 14
+			O functie care primeste 2 parametri(un array si un numar). Folosind binary search verificati daca numarul primit ca parametru se gaseste in array.
+			*/
+			function functie14(arr, val) {
+				arr = sortCres(arr);
+				let st = 0, dr = arr.length - 1, mij;
+				while(st <= dr) {
+					mij = parseInt((st + dr) / 2);
+					if(val === arr[mij]) {
+						return true;
+					}
+					if(val < arr[mij]) {
+						dr = mij - 1;
+					}
+					if(val > arr[mij]) {
+						st = mij + 1;
+					}
+				}
+				return false;
+			}
+			console.log("14) O functie care primeste 2 parametri(un array si un numar). Folosind binary search verificati daca numarul primit ca parametru se gaseste in array.\n");
+			console.log("functie14([20, -53, -75, 0, 13, 98, -159, 357], -159) = " + functie14([20, -53, -75, 0, 13, 98, -159, 357], -159));
+			console.log("functie14([20, -53, -75, 0, 13, 98, -159, 357], -13) = " + functie14([20, -53, -75, 0, 13, 98, -159, 357], -13));
+
+			/**
+			Problema 15
+			O functie care implementeaza binary search pentru a verifica daca un numar se regaseste intr-un array. Dupa ce se termina executia functiei trebuie sa puteti afisa de cate ori s-a apelat functia recursiv. (hint: puteti folosi 2 functii sau variabila globala)
+			*/
+			function functie15(arr, val, st, dr, nrApeluri) {
+				if(st > dr) {
+					console.log("\nNr. apeluri = " + nrApeluri);
+					return false;
+				}
+				let mij = parseInt((st+dr)/2);
+				if(val === arr[mij]) {
+						console.log("\nNr. apeluri = " + nrApeluri);
+						return true;
+					}
+				if(val < arr[mij]) {
+					return functie15(arr, val, st, mij - 1, nrApeluri+1);
+				}
+				if(val > arr[mij]) {
+					return functie15(arr, val, mij + 1, dr, nrApeluri+1);
+				}
+			}
+			console.log("15) O functie care implementeaza binary search pentru a verifica daca un numar se regaseste intr-un array. Dupa ce se termina executia functiei trebuie sa puteti afisa de cate ori s-a apelat functia recursiv. (hint: puteti folosi 2 functii sau variabila globala)\n");
+			let arr = [20, -53, -75, 0, 13, 98, -159, 357];
+			let val = 100;
+			arr = sortCres(arr);
+			console.log("functie15(["+ arr +"], "+ val + ", 0, 7, 0) = " + functie15(arr, val, 0, arr.length-1, 0));
+			let arr2 = [-58, 20, -37, 301, -2.36, 0.94, 205, -0.8, -61];
+			let val2 = -2.36;
+			arr2 = sortCres(arr2);
+			console.log("functie15(["+ arr2 +"], "+ val2 + ", 0, 8, 0) = " + functie15(arr2, val2, 0, arr2.length-1, 0));
+		</script>
+	</head>
+	<body>
+		<!-- empty -->
+	</body>
+</html>
