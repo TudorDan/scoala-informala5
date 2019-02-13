@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Tabel 3 * 3</title>
+		<script type="text/javascript">
+			let emptyImg = 'http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg';
+			let crossImg = 'http://www.drodd.com/images14/x12.jpg';
+			function changeOver(img) {
+				if (img.getAttribute('src') === emptyImg) {
+					img.setAttribute('src', crossImg);
+				}
+			}
+			function changeOut(img) {
+				if (img.getAttribute('src') === crossImg) {
+					img.setAttribute('src', emptyImg);
+				}
+			}
+		</script>
+		<style type="text/css">
+			img {
+				width: 120px;
+				height: 120px;
+			}
+		</style>
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				<td><img onmouseover="changeOver(this);" onmouseout="changeOut(this);" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+				<td><img onmouseover="changeOver(this);" onmouseout="changeOut(this);" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+				<td><img onmouseover="changeOver(this);" onmouseout="changeOut(this);" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+			</tr>
+			<tr>
+				<td><img onmouseover="changeOver(this);" onmouseout="changeOut(this);" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+				<td><img onmouseover="changeOver(this);" onmouseout="changeOut(this);" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+				<td><img onmouseover="changeOver(this);" onmouseout="changeOut(this);" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+			</tr>
+			<tr>
+				<td><img onmouseover="changeOver(this);" onmouseout="changeOut(this);" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+				<td><img onmouseover="changeOver(this);" onmouseout="changeOut(this);" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+				<td><img onmouseover="changeOver(this);" onmouseout="changeOut(this);" src="http://static.wixstatic.com/media/b77fe464cfc445da9003a5383a3e1acf.jpg" /></td>
+			</tr>
+		</table>
+	</body>
+</html>

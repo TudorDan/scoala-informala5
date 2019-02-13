@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+}
+html, body {
+	background-color: #2E1475;
+	font-family: Arial, sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+}
+body {
+	margin: 30px;
+}
+main {
+	height: 700px;
+	display: flex;
+	background-color: #FFF;
+}
+form {
+	width: 25%;
+	margin: 10px;
+	color: #CF2027;
+}
+#displayScenery {
+	width: 75%;
+	background: url(../img/aarhusArtMuseumPanorama.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+label {
+	display: block;
+}
+h1 {
+	color: #FFF;
+	font-size: 60px;
+}
+fieldset p {
+	color: #444;
+}
+input, select {
+	border: 1px solid #444;
+}

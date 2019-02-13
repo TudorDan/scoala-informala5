@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Formular 5</title>
+		<script type="text/javascript">
+			function valideaza(elem, event) {
+				event.preventDefault();
+			}
+			function actualizareContor() {
+				document.querySelector('#contor').innerText =
+				document.querySelector('[name="input1"]').value.length;
+			}
+		</script>
+		<style type="text/css">
+			label {
+				display: block;
+				margin-bottom: 10px;
+				width: 250px;
+			}
+			#contor {
+				display: inline-block;
+				float: right;
+				margin-right: 20px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<main>
+			<form onsubmit="valideaza(this, event);" autocomplete="off">
+				<h2>Formular 5</h2>
+				<p>1 input si afisati intr-un span/div in coltul dreapta jos, lungimea sirului de caractere tastat:</p>
+				<label>
+					<span>Caractere: </span>
+					<input onkeyup="actualizareContor()" type="text" name="input1" placeholder="tastati caractere" /><br />
+					<span id="contor">0</span>
+				</label>
+				<input type="submit" />
+			</form>
+			<div id="displayScenery"><h1 align="center">Formulare</h1></div>
+		</main>
+	</body>
+</html>

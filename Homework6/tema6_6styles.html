@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Formular 6</title>
+		<script type="text/javascript">
+			function valideaza(elem, event) {
+				event.preventDefault();
+			}
+			function limitareContor() {
+				let in1 = document.querySelector('[name="input1"]');
+				let lungime = in1.value.length;
+				if (lungime > 9) {
+					event.preventDefault();
+				}
+			}
+			function actualizareContor() {
+				let contor = document.querySelector('#contor');
+				let in1 = document.querySelector('[name="input1"]');
+				let lungime = in1.value.length;
+				contor.innerText = lungime + '/10';
+				if (lungime === 10) {
+					contor.classList.add('stop');
+				} else {
+					contor.classList.remove('stop');
+				}
+			}
+		</script>
+		<style type="text/css">
+			label {
+				display: block;
+				margin-bottom: 10px;
+				width: 250px;
+			}
+			#contor {
+				display: inline-block;
+				float: right;
+				margin-right: 20px;
+			}
+			.stop {
+				color: red;
+			}
+			form {
+				color: black !important;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<main>
+			<form onsubmit="valideaza(this, event);" autocomplete="off">
+				<h2>Formular 6</h2>
+				<p>Limitati numarul de caractere la 10. In momentul in care am ajuns la 10, inrositi counterul si folosind event.preventDefault() pe evenimentul onkeypress opriti utilizatorul sa mai introduca caractere in plus:</p>
+				<label>
+					<span>Caractere: </span>
+					<input type="text" name="input1" onkeypress="limitareContor()" onkeyup="actualizareContor()" placeholder="tastati caractere" />
+					<span id="contor">0/10</span>
+				</label>
+				<input type="submit" />
+			</form>
+			<div id="displayScenery"><h1 align="center">Formulare</h1></div>
+		</main>
+	</body>
+</html>

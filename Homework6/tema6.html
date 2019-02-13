@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Formular</title>
+		<script type="text/javascript">
+			function valideaza() {
+
+			}
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<main>
+			<form onsubmit="valideaza();">
+				<p>
+					<label>
+						<span>Name: </span>
+						<input type="text" name="input1" placeholder="Name" />
+					</label>
+				</p>
+				<p>
+					<label>
+						<span>Country of origin: </span>
+						<input type="text" name="input2" placeholder="Country of origin" />
+					</label>
+				</p>
+				<p>
+					<label>
+						<span>Profession: </span>
+						<input type="text" name="input3" placeholder="Profession" />
+					</label>
+				</p>
+				<p>
+					<label>
+						<span>Choose the country you would like to visit :</span>
+						<select name="countries">
+						    <option value="france">France</option>
+						    <option value="us">United States</option>
+						    <option value="china">China</option>
+						    <option value="spain">Spain</option>
+					  	</select>
+					</label>
+				</p>
+				<p>
+					<label>
+						<span>Choose the city you would like to visit :</span>
+						<select name="cities">
+						    <option value="paris">Paris</option>
+						    <option value="tokyo">Tokyo</option>
+						    <option value="singapore">Singapore</option>
+						    <option value="hongKong">Hong Kong</option>
+					  	</select>
+					</label>
+				</p>
+				<fieldset>
+					<legend>Pick the sports that you like:</legend>
+					<p>
+						<input type="checkbox" name="option1" value="swimming" /><span>Swimming</span>
+					</p>
+					<p>
+						<input type="checkbox" name="option2" value="dancing" /><span>Dancing</span>
+					</p>
+					<p>
+						<input type="checkbox" name="option3" value="Huawei" /><span>Skiing</span>
+					</p>
+				</fieldset>
+				<br />
+				<fieldset>
+					<legend>Select a tourist activity:</legend>
+					<p>
+						<input type="radio" name="activity" value="sightseeing" /><span>Sightseeing</span>
+					</p>
+					<p>
+						<input type="radio" name="activity" value="snorkeling" /><span>Snorkeling</span>
+					</p>
+					<p>
+						<input type="radio" name="activity" value="clubsAndPubs" /><span>Clubs and Pubs</span>
+					</p>
+				</fieldset>
+				<br />
+				<input type="submit" />
+			</form>
+			<div id="displayScenery"><h1 align="center">Favorite Tourist Destinations</h1></div>
+		</main>
+	</body>
+</html>

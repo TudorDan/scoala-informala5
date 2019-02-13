@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Formular 2</title>
+		<script type="text/javascript">
+			function valideaza(elem, event) {
+				event.preventDefault();
+				let in1 = document.querySelector('[name="input1"]');
+				let in2 = document.querySelector('[name="input2"]');
+				if (in1.value === in2.value) {
+					in1.classList.add('egale');
+					in2.classList.add('egale');
+				} else {
+					if (in1.value > in2.value) {
+						in1.classList.add('egale');
+						in2.classList.remove('egale');
+					} else {
+						in1.classList.remove('egale');
+						in2.classList.add('egale');
+					}
+				}
+			}
+		</script>
+		<style type="text/css">
+			label {
+				display: block;
+				margin-bottom: 10px;
+			}
+			.egale {
+				background-color: #A8FFA8;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<main>
+			<form onsubmit="valideaza(this, event);" autocomplete="off">
+				<h2>Formular 2</h2>
+				<p>2 inputuri si colorati inputul care are valoarea mai mare. Daca sunt egale, colorati-le pe ambele:</p>
+				<label>
+					<span>Valoarea 1: </span>
+					<input type="text" name="input1" placeholder="introduceti o valoare" />
+				</label>
+				<label>
+					<span>Valoarea 2: </span>
+					<input type="text" name="input2" placeholder="introduceti o valoare" />
+				</label>
+				<input type="submit" />
+			</form>
+			<div id="displayScenery"><h1 align="center">Formulare</h1></div>
+		</main>
+	</body>
+</html>

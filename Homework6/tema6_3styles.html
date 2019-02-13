@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Formular 3</title>
+		<script type="text/javascript">
+			function valideaza(elem, event) {
+				event.preventDefault();
+				let in1 = document.querySelector('[name="input1"]');
+				let in2 = document.querySelector('[name="input2"]');
+				let in3 = document.querySelector('[name="input3"]');
+				if (in1.value >= in2.value) {
+					in3.value = in1.value;
+				} else {
+					in3.value = in2.value;
+				}
+			}
+		</script>
+		<style type="text/css">
+			label {
+				display: block;
+				margin-bottom: 10px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<main>
+			<form onsubmit="valideaza(this, event);" autocomplete="off">
+				<h2>Formular 3</h2>
+				<p>3 inputuri si afisati in al 3-lea input valoarea inputului mai mare dintre primul si al doilea:</p>
+				<label>
+					<span>Valoarea 1: </span>
+					<input type="text" name="input1" placeholder="introduceti o valoare" />
+				</label>
+				<label>
+					<span>Valoarea 2: </span>
+					<input type="text" name="input2" placeholder="introduceti o valoare" />
+				</label>
+				<label>
+					<span>Valoarea mai mare: </span>
+					<input type="text" name="input3" />
+				</label>
+				<input type="submit" />
+			</form>
+			<div id="displayScenery"><h1 align="center">Formulare</h1></div>
+		</main>
+	</body>
+</html>

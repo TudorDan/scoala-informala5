@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Formular 7</title>
+		<script type="text/javascript">
+			function valideaza(elem, event) {
+				event.preventDefault();
+			}
+			function doarCifre(event) {
+				let in1 = document.querySelector('[name="input1"]');
+				if (event.keyCode < 48 || event.keyCode > 57) {
+					event.preventDefault();
+				}
+			}
+		</script>
+		<style type="text/css">
+			label {
+				display: block;
+				margin-bottom: 10px;
+			}
+			#contor {
+				display: inline-block;
+				float: right;
+				margin-right: 20px;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<main>
+			<form onsubmit="valideaza(this, event);" autocomplete="off">
+				<h2>Formular 7</h2>
+				<p>Pastrati doar 1 input si folosind event.preventDefault pe evenimentul onkeypress, opriti utilizatorul sa mai introduca orice altceva decat numere:</p>
+				<label>
+					<span>Introduceti un numar (doar cifre): </span>
+					<input type="text" name="input1" onkeypress="doarCifre(event)" placeholder="tastati cifre" />
+				</label>
+				<input type="submit" />
+			</form>
+			<div id="displayScenery"><h1 align="center">Formulare</h1></div>
+		</main>
+	</body>
+</html>
