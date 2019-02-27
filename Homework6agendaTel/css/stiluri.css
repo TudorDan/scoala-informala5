@@ -19,6 +19,9 @@ main {
 	background-size: cover;
 	min-height: 700px;
 }
+button:hover {
+	cursor: pointer;
+}
 form {
 	display: inline-block;
 	background-color: rgba(254, 202, 39, 0.9);

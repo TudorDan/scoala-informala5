@@ -16,6 +16,7 @@ function adaugaContact(event) {
 		}
 
 		if(nrLinie === -1) { //nume nou
+			arataTabel();
 			// Create an empty <tr> element and add it to the 1st position of the table:
 			let row = table.insertRow(0);
 
@@ -24,11 +25,11 @@ function adaugaContact(event) {
 			row.insertCell(1).innerHTML = telefon.value;
 
 			let cellModifica = row.insertCell(2);
-			cellModifica.innerHTML = 'Modifica'.link('#');
+			cellModifica.innerHTML = 'Modifică'.link('#');
 			cellModifica.onclick = modifica;
 
 			let cellSterge = row.insertCell(3);
-			cellSterge.innerHTML = 'Sterge'.link('#');
+			cellSterge.innerHTML = 'Șterge'.link('#');
 			cellSterge.onclick = sterge;
 		} else {
 			linii[nrLinie].cells[1].innerHTML = telefon.value;
@@ -88,6 +89,23 @@ function modifica(elem) {
 }
 
 function sterge(elem) {
+	let nume = document.querySelector('[name="nume"]');
+	let telefon = document.querySelector('[name="telefon"]');
+	let linii = document.querySelectorAll('tr');
+	if(linii.length === 2) {
+		ascundeTabel();
+		nume.value = '';
+		telefon.value = '';
+	}
 	let linie = elem.path[2];
 	linie.parentNode.removeChild(linie);
+}
+
+function ascundeTabel() {
+	let tabel = document.querySelector('table');
+	tabel.style.display = 'none';
+}
+function arataTabel() {
+	let tabel = document.querySelector('table');
+	tabel.style.display = 'table';
 }
