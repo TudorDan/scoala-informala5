@@ -1,0 +1,59 @@
+* {
+	box-sizing: border-box;
+}
+html, body {
+	background-color: #C2D3DA;
+	font-family: Arial, sans-serif;
+	font-size: 24px;
+}
+body {
+	margin: 30px;
+	color: black;
+	text-align: center;
+}
+main {
+	background: url(../img/phoneBooth.jpg) no-repeat fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 700px;
+}
+form {
+	display: inline-block;
+	background-color: rgba(254, 202, 39, 0.9);
+	width: 800px;
+	margin-bottom: 5px;
+	padding: 20px 50px 0 50px;
+}
+#eroareNume, #eroareTelefon {
+	display: block;
+	color: red;
+	font-weight: bold;
+}
+#eroareNume {
+	text-align: left;
+}
+#eroareTelefon {
+	text-align: right;
+}
+table {
+	background-color: rgba(254, 202, 39, 0.9);
+	width: 800px;
+	padding: 20px 50px;
+}
+label > input {
+	border: 1px solid #A5C7FE;
+	padding: 5px;
+	font-size: 20px;
+}
+button {
+	background-color: rgba(63, 80, 181, 0.9);
+	color: white;
+	border: 0px;
+	padding: 10px;
+	margin: 10px 0 20px 0;
+}
+form, table, input, button {
+	border-radius: 5px;
+}
