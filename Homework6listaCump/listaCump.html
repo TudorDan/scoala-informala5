@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Listă de cumpărături</title>
+		<link rel="stylesheet" type="text/css" href="css/stil.css">
+	</head>
+	<body>
+		<main>
+			<div id="whiteBackground" align="center">
+				<h1>Shopping List</h1>
+				<form autocomplete="off">
+					<input type="text" name="description">
+					<button onclick="addItem(event);">Add Item</button>
+					<span id="itemError"></span>
+				</form>
+				<div id="buttons">
+					<button onclick="sortAsc();">Sort asc</button>
+					<button onclick="sortDesc();">Sort desc</button>
+				</div>
+				<table align="center">
+					<thead>
+						<tr>
+							<th>Item description</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</main>
+		<script type="text/javascript" charset="utf-8" src="js/aplicatia.js"></script>
+	</body>
+</html>

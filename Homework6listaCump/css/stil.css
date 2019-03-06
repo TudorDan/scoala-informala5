@@ -1,0 +1,82 @@
+* {
+	box-sizing: border-box;
+}
+html, body {
+	background-color: #D0BCFE;
+	font-family: Arial, sans-serif;
+	font-size: 24px;
+}
+body {
+	margin: 30px;
+	color: black;
+	text-align: center;
+}
+main {
+	background: url(../img/singaporeRetail.jpg) no-repeat fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 700px;
+	position: relative;
+}
+#whiteBackground {
+	width: fit-content;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 5px;
+	position: absolute;
+	left: 35%;
+	top: 4%;
+}
+h1 {
+	padding: 20px 0 0 50px;
+	text-align: left;
+}
+form {
+	display: block;
+	padding: 0 50px;
+	text-align: left;
+}
+form > button {
+	background-color: rgba(113, 253, 149, 0.8);
+	color: black;
+	padding: 10px 20px;
+}
+form > input {
+	border: 1px solid #A5C7FE;
+	padding: 5px;
+	font-size: 20px;
+}
+#itemError {
+	display: block;
+	color: red;
+	font-weight: bold;
+}
+#buttons {
+	display: block;
+	padding: 0 50px;
+	text-align: left;
+}
+button {
+	background-color: rgba(208, 188, 254, 0.8);
+	color: black;
+	border: 0px;
+	padding: 10px;
+	margin: 10px 0 20px 0;
+	font-size: 19px;
+}
+table {
+	padding: 0 50px 20px 50px;
+	display: none;
+}
+form, table, input, button {
+	border-radius: 5px;
+}
+th, td {
+	text-align: left;
+	padding-right: 30px;
+}
+#buyButton {
+	background-color: #FF9797;
+	margin: 0;
+}
