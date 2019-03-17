@@ -52,7 +52,7 @@ function ShoppingList() {
 	}
 	this.sortDesc = function() {
 		for(let i = 0; i < this.items.length - 1; i++) {
-			for(let j = i+1; j< this.items.length; j++) {
+			for(let j = i+1; j < this.items.length; j++) {
 				if(this.items[i].description < this.items[j].description) {
 					[this.items[i], this.items[j]] = [this.items[j], this.items[i]];
 				}
@@ -92,3 +92,23 @@ function sortDesc() {
 	sh.sortDesc();
 	sh.display();
 }
+
+function verifica(event) {
+	if(event.keyCode !== 13) {
+		let exists = false;
+		let itemError = document.querySelector('#itemError');
+		let elem = event.srcElement;
+		for(let i = 0; i < sh.items.length && !exists; i++) {
+			if(sh.items[i].description === elem.value) {
+				exists = true;
+			}
+		}
+		if(exists) {
+			itemError.innerHTML = `Item <u>${elem.value}</u> is already in the list!`;
+		} else {
+			itemError.innerHTML = '';
+		}
+	}
+}
+
+document.querySelector('[name="description"]').addEventListener("keyup", verifica, false);
