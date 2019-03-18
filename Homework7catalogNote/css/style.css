@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+}
+html, body {
+	font-family: Arial, sans-serif;
+	font-size: 24px;
+}
+body {
+	display: flex;
+}
+#lista_elevi_wrapper {
+	background-color: #ECECF0;
+	width: 100%;
+	padding: 10px;
+}
+form {
+	padding: 1px;
+	border: 1px solid black;
+	margin-bottom: 10px;
+}
+#tabel_wrapper, #tabel_wrapper_elev {
+	padding: 1px;
+	border: 1px solid black;
+}
+table {
+	display: none;
+	table-layout: auto;
+	width: 100%;
+	text-align: center;
+}
+
+input, button {
+	font-size: 18px;
+}
+.butoaneAdaugaAscunde {
+	color: #00A63F;
+	border: 3px solid #00A63F;
+	padding: 3px 14px;
+	font-weight: bolder;
+	background-color: transparent;
+}
+.butoaneAdaugaAscunde:hover {
+	color: #FFF;
+	background: #02C54C;
+	border-color: #02C54C;
+}
+.butonSortare {
+	padding: 9px 14px;
+	color: #FFF;
+    background: #00A63F;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.butonSortare:hover {
+	background: #02C54C;
+}
+#note_elev_wrapper {
+	background-color: #F4F2B1;
+	display: none;
+	width: 100%;
+	padding: 10px;
+}

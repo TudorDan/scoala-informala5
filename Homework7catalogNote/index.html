@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<meta charset="utf-8">
+		<title>Catalog</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div id="lista_elevi_wrapper">
+			<h1>Listă elevi</h1>
+			<form autocomplete="off">
+				<label>Nume:</label>
+				<input type="text" name="elev">
+				<button onclick="adaugaElev();" class="butoaneAdaugaAscunde">Adaugă elev</button>
+			</form>
+			<div id="tabel_wrapper">
+				<button onclick="sortAscMedii();" class="butonSortare">Sortează ascendent după medie note</button>
+				<button onclick="sortDescMedii();" class="butonSortare">Sortează descendent după medie note</button>
+				<p>Nici un elev adăugat.</p>
+				<table>
+					<thead>
+						<tr>
+							<th>Nume</th>
+							<th>Medie Note</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+		<div id="note_elev_wrapper">
+			<button class="butoaneAdaugaAscunde" onclick="ascundeNoteElev();" >Ascunde notele</button>
+			<h2>Note elev:</h2>
+			<form autocomplete="off">
+				<label>Nota:</label>
+				<input type="text" name="nota">
+				<button onclick="adaugaNota();" class="butoaneAdaugaAscunde">Adaugă nota</button>
+			</form>
+			<div id="tabel_wrapper_elev">
+				<button onclick="sortAscNote();" class="butonSortare">Sortează ascendent notele</button>
+				<button onclick="sortDescNote();" class="butonSortare">Sortează descendent notele</button>
+				<p>Nici o notă adăugată.</p>
+				<table align="center">
+					<thead>
+						<tr>
+							<th>Nota</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
