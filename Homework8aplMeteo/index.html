@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<meta charset="utf-8">
+		<title>Meteo</title>
+		<link rel="stylesheet" type="text/css" href="css/stiluri.css">
+	</head>
+	<body>
+		<form autocomplete="off">
+			<input type="text" name="oras" size="45">
+			<button onclick="afiseazaVremea();">Afișează vremea</button>
+			<button onclick="afiseazaPrognoza();">Afișează prognoza</button>
+			<div id="eroareOras"></div>
+		</form>
+		<div id="vremeaAcum">
+			<h3>Vremea acum</h3>
+			<hr />
+			<div id="detaliiVremeaAcum">
+				<div id="textVremeaAcum">
+					<div><img id="iconita"/></div>
+					<div id="descriere">Descriere:</div>
+					<div id="umiditate">Umiditate:</div>
+					<div id="presiune">Presiune:</div>
+					<div id="temp">Temperatura curentă:</div>
+					<div id="min">Minima zilei:</div>
+					<div id="max">Maxima zilei:</div>
+				</div>
+				<div id="hartaGoogleMaps">
+					<iframe
+					    width="100%"
+						height="450"
+						frameborder="0" style="border:0"
+						src="" allowfullscreen>
+					</iframe>
+				</div>
+			</div>
+		</div>
+		<div id="vremeaUrmZile">
+			<h3>Vremea în următoarele zile</h3>
+			<hr />
+			<table>
+				<thead>
+					<tr></tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<script type="text/javascript" src="js/aplicatie.js"></script>
+	</body>
+</html>
