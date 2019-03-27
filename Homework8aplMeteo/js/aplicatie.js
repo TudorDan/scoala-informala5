@@ -20,7 +20,7 @@ function afiseazaVremea() {
                 &q=${oras}`;
                 document.querySelector('#hartaGoogleMaps>iframe').src = mapurl;
                 document.querySelector('#hartaGoogleMaps').style.display = 'block';
-                document.querySelector("#iconita").src = `http://openweathermap.org/img/w/${info.weather[0].icon}.png`;
+                document.querySelector("#iconita").src = `https://openweathermap.org/img/w/${info.weather[0].icon}.png`;
                 document.querySelector("#descriere").innerHTML = `Descriere: ${info.weather[0].description}`;
                 document.querySelector("#umiditate").innerHTML = `Umiditate: ${info.main.humidity}`;
                 document.querySelector("#presiune").innerHTML = `Presiune: ${info.main.pressure}`;
@@ -95,7 +95,7 @@ function afiseazaPrognoza() {
                     let nrLin = ore.indexOf(d[1]);
                     let nrCol = date.indexOf(d[0]);
                     linii[nrLin].cells[nrCol].innerHTML = `
-                        <img src="http://openweathermap.org/img/w/${info.list[p].weather[0].icon}.png" /><br />
+                        <img src="https://openweathermap.org/img/w/${info.list[p].weather[0].icon}.png" /><br />
                         Ora: ${d[1].substring(0, 5)}<br />
                         Temperatura: ${info.list[p].main.temp}<br />
                         Descriere: ${info.list[p].weather[0].description}
@@ -110,10 +110,10 @@ function afiseazaPrognoza() {
 
                 /*
                 antet = data = list[i].dt_txt 1
-                cell = 
-                    icon = list[i].weather[0].icon, 
-                    ora = list[i].dt_txt 2, 
-                    tem = list[i].main.temp, 
+                cell =
+                    icon = list[i].weather[0].icon,
+                    ora = list[i].dt_txt 2,
+                    tem = list[i].main.temp,
                     desc = list[i].weather[0].description
                 */
             })
