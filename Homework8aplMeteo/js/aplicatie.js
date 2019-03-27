@@ -27,6 +27,12 @@ function afiseazaVremea() {
                 document.querySelector("#temp").innerHTML = `Temperatura curentă: ${info.main.temp}`;
                 document.querySelector("#min").innerHTML = `Minima zilei: ${info.main.temp_min}`;
                 document.querySelector("#max").innerHTML = `Maxima zilei: ${info.main.temp_max}`;
+                //stergere tabel anterior
+                let tabel = document.querySelector('#vremeaUrmZile>table');
+                tabel.innerHTML = `<thead>
+                                        <tr></tr>
+                                    </thead>
+                                    <tbody></tbody>`;
             })
             .catch(error => {
                 //document.querySelector('[name="oras"]').value = error;
