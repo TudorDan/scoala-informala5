@@ -94,8 +94,8 @@ function veziNoteElev() {
     let noteElev = document.querySelector('#note_elev_wrapper');
     noteElev.style.display = 'block';
     let numeElev = document.querySelector('#note_elev_wrapper>h2');
-    indiceElevAfisat = this;
-    numeElev.innerHTML = `Note elev: ${catalogElevi.elevi[this].nume}`;
+    indiceElevAfisat = this; //de la rand.cells[2].onclick = veziNoteElev.bind(i);
+    numeElev.innerHTML = `Note elev: ${catalogElevi.elevi[this].nume}`; //scriem nume elev la titlu pagina
     catalogElevi.elevi[this].deseneazaElev();
     let notaElev = document.querySelector('[name="nota"]');
     notaElev.value = '';
