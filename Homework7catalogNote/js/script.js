@@ -35,6 +35,8 @@ function Elev(nume) {
     }
 }
 
+let indiceElevAfisat = -1;
+
 /**
  Cream clasa „Catalog”, cu un vector de elevi și metodele: adaugaElev() (ce adaugă câte un elev în vectorul de elevi), deseneazaCatalog() (ce actualizează tabelul cu elevi și mediile lor), sortAscMediile() și sortDescMediile(), care se ocupă de sortările meiilor.
  */
@@ -69,16 +71,36 @@ function Catalog() {
         }
     }
     this.sortAscMediile = function() {
-        return this.elevi.sort((a,b) => a.medie - b.medie);
+        let noteElev = document.querySelector('#note_elev_wrapper');
+        let esteAfisat = (noteElev.style.display === 'block');
+        //console.log('esteAfisat=' + esteAfisat);
+        let numeAfisat;
+        if(esteAfisat) {
+            numeAfisat = this.elevi[indiceElevAfisat].nume;
+        }
+        //console.log('numeAfisat=' + numeAfisat);
+        this.elevi.sort((a,b) => a.medie - b.medie);
+        //console.log('indexAfisat=' + this.elevi.findIndex(elev => elev.nume === numeAfisat));
+        if(esteAfisat) {
+            indiceElevAfisat = this.elevi.findIndex(elev => elev.nume === numeAfisat);
+        }      
     }
     this.sortDescMediile = function() {
-        return this.elevi.sort((a,b) => b.medie - a.medie);
+        let noteElev = document.querySelector('#note_elev_wrapper');
+        let esteAfisat = (noteElev.style.display === 'block');
+        let numeAfisat;
+        if(esteAfisat) {
+            numeAfisat = this.elevi[indiceElevAfisat].nume;
+        }
+        this.elevi.sort((a,b) => b.medie - a.medie);
+        if(esteAfisat) {
+            indiceElevAfisat = this.elevi.findIndex(elev => elev.nume === numeAfisat);
+        }
     }
 }
 
 //Facem obiectul „catalogElevi”, o instanțiere a clasei „Catalog”.
 let catalogElevi = new Catalog();
-let indiceElevAfisat = -1;
 
 function adaugaElev() {
     event.preventDefault();
@@ -126,6 +148,7 @@ function sortAscNote() {
 function sortDescNote() {
     catalogElevi.elevi[indiceElevAfisat].sortDescNotele();
     catalogElevi.elevi[indiceElevAfisat].deseneazaElev();
+
 }
 
 function sortAscMedii() {
